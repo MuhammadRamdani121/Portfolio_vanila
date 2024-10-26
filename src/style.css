@@ -1,0 +1,175 @@
+body {
+    padding: 0; /* Menghilangkan padding */
+    margin: 0; /* Menghilangkan margin */
+}
+
+/* Header Start */
+#header {
+    display: flex; /* Menggunakan flexbox untuk layout */
+    align-items: center; /* Vertically center items */
+    padding: 2px 128px; /* Padding di header */
+    position: fixed; /* Menggunakan fixed */
+    top: 0; /* Posisi tetap di bagian atas */
+    left: 0; /* Posisi di sisi kiri */
+    right: 0; /* Posisi di sisi kanan */
+    z-index: 1000; /* Menempatkan elemen di atas elemen lainnya */
+    background: white; /* Background putih */
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3); /* Bayangan di bawah header */
+}
+
+#header img {
+    width: 5%; /* Lebar gambar */
+    height: 5%; /* Tinggi gambar */
+}
+
+#header > h1 {
+    font-family: "Oswald", sans-serif; /* Font untuk judul */
+    font-weight: 700; /* Ketebalan font */
+    font-size: 48px; /* Ukuran font */
+    font-style: italic; /* Gaya font italic */
+    margin: 0; /* Menghilangkan margin */
+}
+
+#header .navbar {
+    font-size: 24px; /* Ukuran font untuk navbar */
+    margin-left: auto; /* Memindahkan navbar ke kanan */
+}
+
+#header .navbar > a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    margin-left: 50px; /* Jarak antar link */
+    color: black; /* Warna teks */
+}
+/* Header End */
+
+/* Landing Start */
+#landing {
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Jarak antar item */
+    padding: 230px 128px; /* Padding di landing */
+    gap: 200px; /* Jarak antar item */
+    box-shadow: 0 4px 4px rgba(156, 77, 77, 0.3); /* Bayangan di landing */
+}
+
+#landing p {
+    font-family: "Asap Condensed", sans-serif; /* Font untuk paragraf */
+    margin-right: 180px; /* Jarak kanan */
+    padding-bottom: 10px; /* Padding bawah */
+}
+
+#landing img {
+    max-width: 80%; /* Maksimal lebar gambar */
+    height: auto; /* Tinggi otomatis */
+    margin-right: 130px; /* Jarak kanan gambar */
+}
+
+#landing a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.btn-project {
+    color: black; /* Warna teks */
+    border: 2px black solid; /* Border hitam */
+    margin-left: 150px; /* Jarak kiri */
+    padding: 10px 40px; /* Padding di tombol */
+    border-radius: 40px; /* Sudut melingkar */
+    font-size: 20px; /* Ukuran font */
+    justify-content: center; /* Pusatkan konten */
+}
+/* Landing End */
+
+/* Landing Page 2 */
+#container-landing-page2 {
+    padding-top: 60px; /* Padding atas */
+    text-align: center; /* Pusatkan teks */
+}
+
+.landing-page2 {
+    margin: 40px 0px; /* Margin atas dan bawah */
+    padding: 4px 128px; /* Padding */
+    display: grid; /* Menggunakan grid */
+    gap: 30px; /* Jarak antar item */
+    grid-template-areas: /* Penataan grid */
+        "box-1 box-2 box-3"
+        "box-4 box-5 box-6";
+}
+
+.img-box-1 {
+    max-width: 100%; /* Maksimal lebar gambar */
+    height: auto; /* Tinggi otomatis */
+}
+
+/* Style untuk setiap box */
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6 {
+    padding: 0 10px; /* Padding */
+    text-align: justify; /* Rata kiri dan kanan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Bayangan */
+}
+/* Landing Page 2 End */
+
+/* Footer Start */
+#footer {
+    background-color: black; /* Warna background footer */
+    color: white; /* Warna teks footer */
+    padding: 2px 128px; /* Padding di footer */
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-around; /* Jarak antar item */
+    align-items: center; /* Vertically center items */
+}
+
+.navbar-footer a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: white; /* Warna teks */
+    display: flex; /* Menggunakan flexbox */
+    text-align: center; /* Pusatkan teks */
+    flex-direction: row; /* Mengatur item dalam baris */
+    font-size: 24px; /* Ukuran font */
+    padding: 5px; /* Padding */
+}
+
+.footer-p {
+    width: 300px; /* Lebar footer */
+}
+/* Footer End */
+
+/* Responsiveness */
+@media (max-width: 768px) { /* Untuk layar kecil */
+    #header {
+        padding: 2px 16px; /* Mengurangi padding */
+    }
+    
+    #header h1 {
+        font-size: 32px; /* Mengurangi ukuran font judul */
+    }
+
+    #header .navbar {
+        font-size: 18px; /* Mengurangi ukuran font navbar */
+    }
+
+    #landing {
+        flex-direction: column; /* Mengubah ke kolom */
+        padding: 100px 16px; /* Mengurangi padding */
+        gap: 50px; /* Mengurangi gap */
+    }
+
+    #landing img {
+        margin-right: 0; /* Menghilangkan margin kanan */
+        max-width: 100%; /* Maksimal lebar gambar */
+    }
+
+    .landing-page2 {
+        padding: 4px 16px; /* Mengurangi padding */
+        grid-template-areas: /* Menyesuaikan grid */
+            "box-1"
+            "box-2"
+            "box-3"
+            "box-4"
+            "box-5"
+            "box-6";
+    }
+
+    .navbar-footer a {
+        font-size: 18px; /* Mengurangi ukuran font footer */
+    }
+}
